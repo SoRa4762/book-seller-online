@@ -1,0 +1,9 @@
+so when ever you are using tailwind and you want to add things that tailwind doesnt have currently on its config
+just set its mode to jit,
+
+=> mode: "jit" [aka, just in time compilation]
+
+then you can use things like
+
+=> m-[-50vw] || w-[50vw]
+which is what i wanted to use in my Input, but couldnt cuz tailwind css's max width is only w-96, which is just 24 rem
