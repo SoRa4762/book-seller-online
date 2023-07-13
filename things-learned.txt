@@ -7,3 +7,60 @@ then you can use things like
 
 => m-[-50vw] || w-[50vw]
 which is what i wanted to use in my Input, but couldnt cuz tailwind css's max width is only w-96, which is just 24 rem
+
+==========
+12/07/2023
+==========
+seems like i dont even need to add mode: "jit"
+also the reason why i wasnt able to use tailwind wasnt because it no electricity or no wifi, its because the config was not correct, i had to add the config 
+content: [
+    "./elements/**/*.{ts,tsx}",
+  ],
+
+had to tell tailwind that the elements inside elements are also in need for tailwind so yeah. the code works brilliantly now!
+
+===========
+13/07/2023
+===========
+adding more> and less> in a text section:
+typically i think you should have been able to add 
+
+-webkit-line-clamp: 4; //for 4 lines max
+-webkit-box-orient: vertical; 
+
+and this would limit your line to only 4 at max and it would have been fine, tara nope! not in my condition mate. the line-clamp shit doent even work mate.
+then on click you would remove the limit then add it again, on click on less>
+
+# RESOLVED
+- Seems like you can do it you just need to set the height and width of your component, if its inside any display property, give it 100% or any amount of size you want.
+then on the desc....
+
+hell nah, thats not it, you could add it already, it seems like i just didnt know how, should have just added line-clamp-4 using tailwind css in the <p> it seems like...
+i.e. just this:
+.line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+with this my header is done for, i need to work on its responsiveness, later!
+
+=======
+part 2 [Navbar Section]
+=======
+
+- yeah it seems like its 100vh with 10vh navbar, 60vh books 30vh events right?
+lets get to it I guess.
+
+========
+part 3 [Books below Navbar && rendering them conditionally]
+========
+
+- so what you do is, you just map the navbar then just like the how i had rendered info of A
+particular book on click, you just do that, pass the navId to the book section then according to the id 
+display the information of the section from the navbar.
+
+- work on the new arrivals display part
+    - add the info of all the books to be displayed in the helper folder then map them then use grid to display
+    all of them in 5x2 format
