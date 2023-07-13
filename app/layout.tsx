@@ -1,10 +1,11 @@
-import Header from "@/components/header/page";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Footer from "@/components/footer/page";
+import { Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const alatsi = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Book Seller Online",
@@ -18,11 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className={alatsi.className}>{children}</body>
     </html>
   );
 }
