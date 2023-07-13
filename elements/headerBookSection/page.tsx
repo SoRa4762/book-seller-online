@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import SearchBar from "../searchBar/page";
 import { Button } from "@/components/ui/button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faBook } from "@fortawesome/free-solid-svg-icons";
+
 type Props = {};
 
 const HeaderBookSection = (props: Props) => {
@@ -12,11 +15,17 @@ const HeaderBookSection = (props: Props) => {
   return (
     <>
       <div className="flex flex-row justify-between items-center w-full px-12 pt-8 lg:pt-14 lg:px-20">
-        <h1 className="font-bold text-3xl text-slate-50">📘BOOKS</h1>
+        <h1 className="font-bold text-3xl text-slate-50">
+          <FontAwesomeIcon className="mr-2" icon={faBook} />
+          BOOKS
+        </h1>
         <div className="flex items-center gap-2">
           <SearchBar />
           <Button className="h-8 rounded-xl">
-            My Basket <span className="pl-5">🛒</span>
+            My Basket{" "}
+            <span className="pl-5">
+              <FontAwesomeIcon icon={faCartShopping} />
+            </span>
           </Button>
         </div>
       </div>
