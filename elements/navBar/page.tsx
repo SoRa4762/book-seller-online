@@ -9,7 +9,7 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [navId, setNavId] = useState(1);
   return (
-    <>
+    <div className="h-full w-full">
       {/* navbar */}
       <div className="h-[6vh] w-full text-xs text-slate-500 font-medium lg:text-sm flex gap-2 lg:gap-6 justify-center items-center">
         {NavElements.slice(0, 2).map((nav) => (
@@ -54,10 +54,10 @@ const Navbar = (props: Props) => {
       </div>
 
       {/* books section */}
-      <div className="h-[55vh]">
+      <div className="h-full">
         <BooksSection navId={navId} />
       </div>
-    </>
+    </div>
   );
 };
 

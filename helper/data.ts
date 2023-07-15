@@ -71,3 +71,76 @@ export const NavElements = [
     title: "Work",
   },
 ];
+
+export const NewArrivals = [
+  {
+    id: 1,
+    title: "The Great Gatsby",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/TGG.jfif",
+  },
+  {
+    id: 2,
+    title: "Moby Dick",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/MD.jfif",
+  },
+  {
+    id: 3,
+    title: "War and Peace",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/WaP.jfif",
+  },
+  {
+    id: 4,
+    title: "Hamlet",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/Hamlet.jfif",
+  },
+  {
+    id: 5,
+    title: "The Odyssey",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/TO.jfif",
+  },
+  {
+    id: 6,
+    title: "Madame Bovary",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/Madame.jfif",
+  },
+  {
+    id: 7,
+    title: "The Divine Comedy",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/TDC.jfif",
+  },
+  {
+    id: 8,
+    title: "Lolita",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/Lolita.jfif",
+  },
+  {
+    id: 9,
+    title: "The Brothers Karamazov",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/TBK.jfif",
+  },
+  {
+    id: 10,
+    title: "Crime and Punishment",
+    writer: "Marcel Proust",
+    desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
+    img: "/CaP.jfif",
+  },
+];

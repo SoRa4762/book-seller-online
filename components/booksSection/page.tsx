@@ -8,6 +8,8 @@ const BooksSection = ({ navId }: Props) => {
   return (
     <>
       {navId === 1 && <NewArrival />}
+      {/* {navId === 2 &&
+        "Hello Prajwal, this is me Sonam A.K.A Suneo Uncle, IDK how or why you set my name as such, but yeah, GGs for you!!!"} */}
       {commingSoon.includes(navId) && <ComingSoon />}
     </>
   );
