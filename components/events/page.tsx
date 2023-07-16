@@ -24,6 +24,7 @@ const Events = (props: Props) => {
           />
         ))}
       </div>
+      <p className="h-[9vh] pb-8 flex justify-end items-center text-xs lg:text-sm text-slate-500 font-medium cursor-pointer">More ></p>
     </div>
   );
 };

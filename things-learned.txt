@@ -81,3 +81,9 @@ Set the display to flex and h-full and w-full and set image width whatever you w
 fixing image misorientation in NEXT.js
 - set an size for your image, then set your image's height and width to full & oject fit to cover [h-full w-full object-cover]
 - so with that you are good to go mate
+
+22:07, this is how you add linear-gradient to your react or next.js (minor syntax changes based on the tech) inline css huh?
+style={{background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("someImg")`}}
+
+# UPDATE: To-Do
+i think instead of separting dummy data for each section, i need to add them all in one object, but separated by list of tags, sure, good idea, need to implement later, as it is how it will be in db anyway.
