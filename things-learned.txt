@@ -64,3 +64,20 @@ display the information of the section from the navbar.
 - work on the new arrivals display part
     - add the info of all the books to be displayed in the helper folder then map them then use grid to display
     all of them in 5x2 format
+
+==========
+15/07/2023
+==========
+UPDATE: TO-DO
+now i have done new arrival, i need to make these responsive as well, add a model or a new paget that the user will go to when clicking on the image of the books, probably a new page though, it would be better, IMO.
+also got to add icons for now, static, OFC, and price, dummy data, yeah, thats about it.
+
+FOR IMAGE'S ORIENTATION though
+Set the display to flex and h-full and w-full and set image width whatever you want, so that you can use it to fill your image, and it works excellently. GGs mate.
+
+==========
+3:41 PM - 16/07/2023
+==========
+fixing image misorientation in NEXT.js
+- set an size for your image, then set your image's height and width to full & oject fit to cover [h-full w-full object-cover]
+- so with that you are good to go mate

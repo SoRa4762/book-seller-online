@@ -79,6 +79,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/TGG.jfif",
+    price: "$17",
   },
   {
     id: 2,
@@ -86,6 +87,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/MD.jfif",
+    price: "$27",
   },
   {
     id: 3,
@@ -93,6 +95,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/WaP.jfif",
+    price: "$7",
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/Hamlet.jfif",
+    price: "$12",
   },
   {
     id: 5,
@@ -107,6 +111,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/TO.jfif",
+    price: "$14",
   },
   {
     id: 6,
@@ -114,6 +119,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/Madame.jfif",
+    price: "$25",
   },
   {
     id: 7,
@@ -121,6 +127,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/TDC.jfif",
+    price: "$30",
   },
   {
     id: 8,
@@ -128,6 +135,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/Lolita.jfif",
+    price: "$28",
   },
   {
     id: 9,
@@ -135,6 +143,7 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/TBK.jfif",
+    price: "$17",
   },
   {
     id: 10,
@@ -142,5 +151,33 @@ export const NewArrivals = [
     writer: "Marcel Proust",
     desc: "Swann's Way, the first part of A la recherche de temps perdu, Marcel Proust's seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. The narrator recalls his childhood, aided by the famous madeleine; and describes M. Swann's passion for Odette. The work is incomparable. Edmund Wilson said '[Proust] has supplied for the first time in literature an equivalent in the full scale for the new theory of modern physics.'",
     img: "/CaP.jfif",
+    price: "$27",
+  },
+];
+
+export const EventsData = [
+  {
+    id: 1,
+    img: "/e-jolyne.png",
+    alt: "Kujo Jolyne",
+    title: "JoJo Season 6 ended, is it worth it?",
+    desc: "Made in the interiors of collapsing stars network of wormholes extraordinary claims require extraordinary evidence bits of moving fluff quasar intelligent beings. Descended from astronomers astonishment tendrils of gossamer clouds citizens of distant epochs citizens of distant epochs something incredible is waiting to be known. Something incredible is waiting to be known something incredible is waiting to be known vastness is bearable only through love something incredible is waiting to be known concept of the number one Apollonius of Perga and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
+    price: "$299",
+  },
+  {
+    id: 2,
+    img: "/e-jotaro.jpg",
+    alt: "Kujo Jotaro",
+    title: "Kujo Jotaro in Trouble!",
+    desc: "Birth finite but unbounded vanquish the impossible of brilliant syntheses tesseract Tunguska event. Globular star cluster Jean-François Champollion invent the universe inconspicuous motes of rock and gas Drake Equation citizens of distant epochs. A still more glorious dawn awaits courage of our questions the sky calls to us laws of physics the only home we've ever known extraordinary claims require extraordinary evidence. A very small stage in a vast cosmic arena encyclopaedia galactica kindling the energy hidden in matter a very small stage in a vast cosmic arena extraordinary claims require extraordinary evidence two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
+    price: "$399",
+  },
+  {
+    id: 3,
+    img: "/e-naruhina.jfif",
+    alt: "NaruXHina",
+    title: "Naruto: Shippuden ends today",
+    desc: "On the episode 500, the final episode of Naruto: Shippuden, Naruto and Hinata finally got married. Author expreses gratitude to all the fans for sticking through thick and thin of the series and making it until the end.",
+    price: "$420",
   },
 ];
