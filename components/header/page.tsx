@@ -11,9 +11,10 @@ const Header = (props: Props) => {
       style={{
         background: `url("/header-bg-2.jpg")`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col w-full" style={{ height: "80vh" }}>
+      <div className="flex flex-col w-full h-screen">
         {/* navbar section */}
         <div className="flex flex-row justify-between items-center py-2 bg-slate-50 px-12 lg:px-20">
           <div className="flex flex-row">

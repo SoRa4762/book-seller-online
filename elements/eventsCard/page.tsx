@@ -19,7 +19,6 @@ const Card = ({ id, title, desc, price, img, alt }: Props) => {
             className="rounded-sm shadow-md h-full w-full object-cover shadow-slate-400"
             height={1000}
             width={2000}
-            // fill
             alt={alt}
             src={img}
           />
