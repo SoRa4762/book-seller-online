@@ -181,3 +181,47 @@ export const EventsData = [
     price: "$420",
   },
 ];
+
+export const darkManga = [
+  {
+    id: 1,
+    title: "Berserk",
+    author: "Kentaro Miura",
+    img: "/berserkCover.png",
+    alt: "Berserk Cover",
+    price: "$29",
+  },
+  {
+    id: 2,
+    title: "Homunculus",
+    author: "Hideo Yamamoto",
+    img: "/homunculus.png",
+    alt: "Homunculus Cover",
+    price: "$39",
+  },
+  {
+    id: 3,
+    title: "Vagabond",
+    author: "Takehiko Inoue",
+    img: "/vagabond.jpg",
+    alt: "Vagabond Cover",
+    price: "$69",
+  },
+];
+
+export const KentaroMangas = [
+  {
+    id: 1,
+    title: "Gigantomachia",
+    img: "/gigantomachiacover.jpg",
+    alt: "Gigantomachia Cover",
+    price: "$17",
+  },
+  {
+    id: 2,
+    title: "Futatabi",
+    img: "/futatabi.jpeg",
+    alt: "Futatabi Cover",
+    price: "$27",
+  },
+];
