@@ -15,7 +15,7 @@ const SecondarySection = (props: Props) => {
           backgroundPosition: "center",
         }}
       >
-        <div className="h-[60vh] w-full flex flex-col justify-center backdrop-blur-[2px] px-12 lg:px-20">
+        <div className="h-[60vh] w-full flex flex-col justify-center lg:justify-end backdrop-blur-[2px] px-12 lg:px-20">
           <div className="flex flex-row">
             <div className="flex flex-1">
               {/* dark manga */}
@@ -37,14 +37,14 @@ const SecondarySection = (props: Props) => {
               </p>
             </div>
             {/* dark manga showcase */}
-            <div className="flex flex-[1.5] justify-end gap-4 lg:gap-12 cursor-pointer">
+            <div className="flex flex-[1.5] justify-end gap-4 lg:gap-12">
               {darkManga.map((dmanga) => (
                 <div
                   key={dmanga.id}
                   className="flex flex-col h-[31vh] w-[13vw] gap-1"
                 >
                   <Image
-                    className="h-full w-full object-cover object-top rounded-sm"
+                    className="h-full w-full object-cover object-top rounded-sm cursor-pointer"
                     height={1000}
                     width={2000}
                     src={dmanga.img}
@@ -59,7 +59,7 @@ const SecondarySection = (props: Props) => {
             </div>
           </div>
           <div className="flex flex-row">
-            <p className="h-[6vh] lg:h-[9vh] w-full flex justify-end items-end text-xs lg:text-sm font-medium cursor-pointer">
+            <p className="h-[6vh] lg:h-[9vh] mb-12 w-full flex justify-end items-end text-xs lg:text-sm font-medium cursor-pointer">
               More {">"}
             </p>
           </div>
@@ -75,7 +75,7 @@ const SecondarySection = (props: Props) => {
           backgroundPosition: "center",
         }}
       >
-        <div className="h-[60vh] w-full flex flex-col justify-center backdrop-blur-[2px] px-12 lg:px-20">
+        <div className="h-[60vh] w-full flex flex-col justify-end backdrop-blur-[2px] px-12 lg:px-20">
           {/* author's profile */}
           <div className="flex flex-row">
             <div className="flex flex-1 flex-col">
@@ -127,14 +127,14 @@ const SecondarySection = (props: Props) => {
               </p>
             </div>
             {/* author's work */}
-            <div className="flex flex-1 justify-end gap-4 lg:gap-12 cursor-pointer">
+            <div className="flex flex-1 justify-end gap-4 lg:gap-12">
               {KentaroMangas.map((km) => (
                 <div
                   key={km.id}
                   className="flex flex-col h-[31vh] w-[15vw] lg:w-[13vw] gap-1"
                 >
                   <Image
-                    className="h-full w-full object-cover object-top rounded-sm"
+                    className="h-full w-full object-cover object-top rounded-sm cursor-pointer"
                     height={1000}
                     width={2000}
                     src={km.img}
@@ -149,7 +149,7 @@ const SecondarySection = (props: Props) => {
             </div>
           </div>
           <div className="flex flex-row">
-            <p className="h-[6vh] lg:h-[9vh] w-full flex justify-end items-end text-xs lg:text-sm font-medium cursor-pointer">
+            <p className="h-[6vh] lg:h-[9vh] mb-12 w-full flex justify-end items-center lg:items-end text-xs lg:text-sm font-medium cursor-pointer">
               More {">"}
             </p>
           </div>
