@@ -6,6 +6,8 @@ import SearchBar from "../searchBar/page";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faBook } from "@fortawesome/free-solid-svg-icons";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 type Props = {};
 
@@ -43,10 +45,28 @@ const HeaderBookSection = (props: Props) => {
         ))}
 
         {/* book to click */}
+        <Carousel>
+          {FourBooks.map((book) => (
+            <div key={book.id} className="flex lg:hidden">
+              <Image
+                className={`cursor-pointer ml-2 ${
+                  bookId === book.id && "border-2 border-slate-50 rounded-md"
+                }`}
+                width={100}
+                height={150}
+                src={book.img}
+                alt={book.title}
+                onClick={() => setBookId(book.id)}
+              />
+              <p className="legend">{book.title}</p>
+            </div>
+          ))}
+        </Carousel>
+
         {FourBooks.map((book) => (
           <Image
             key={book.id}
-            className={`cursor-pointer ml-2 ${
+            className={`hidden lg:flex cursor-pointer ml-2 ${
               bookId === book.id && "border-2 border-slate-50 rounded-md"
             }`}
             width={100}
