@@ -161,7 +161,7 @@ export const EventsData = [
     img: "/e-jolyne.png",
     alt: "Kujo Jolyne",
     title: "JoJo Season 6 ended, is it worth it?",
-    desc: "Made in the interiors of collapsing stars network of wormholes extraordinary claims require extraordinary evidence bits of moving fluff quasar intelligent beings. Descended from astronomers astonishment tendrils of gossamer clouds citizens of distant epochs citizens of distant epochs something incredible is waiting to be known. Something incredible is waiting to be known something incredible is waiting to be known vastness is bearable only through love something incredible is waiting to be known concept of the number one Apollonius of Perga and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
+    desc: "Stone Ocean takes place in a maximum-security prison in Florida, where Jolyne Cujoh, the daughter of Jotaro Kujo (the protagonist of Part 3: Stardust Crusaders), becomes embroiled in a mysterious plot. As with previous parts of JoJo's Bizarre Adventure, Stone Ocean is known for its unique characters, intricate battles, and the creative use of supernatural powers known as Stands. It's worth noting that each season of JoJo's Bizarre Adventure has its own distinct style and story. If and when Season 6 is released and adapts Part 6: Stone Ocean, it will be exciting to see how the anime captures the intense action, complex plot twists, and the trademark \"JoJo\" spirit that fans have come to love.",
     price: "$299",
   },
   {
@@ -169,7 +169,7 @@ export const EventsData = [
     img: "/e-jotaro.jpg",
     alt: "Kujo Jotaro",
     title: "Kujo Jotaro in Trouble!",
-    desc: "Birth finite but unbounded vanquish the impossible of brilliant syntheses tesseract Tunguska event. Globular star cluster Jean-François Champollion invent the universe inconspicuous motes of rock and gas Drake Equation citizens of distant epochs. A still more glorious dawn awaits courage of our questions the sky calls to us laws of physics the only home we've ever known extraordinary claims require extraordinary evidence. A very small stage in a vast cosmic arena encyclopaedia galactica kindling the energy hidden in matter a very small stage in a vast cosmic arena extraordinary claims require extraordinary evidence two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.",
+    desc: "Jotaro Kujo, the iconic protagonist of \"JoJo's Bizarre Adventure,\" is known for his exceptional Stand abilities, intelligence, and resourcefulness. However, let's explore a hypothetical scenario where Jotaro finds himself in trouble and consider how he might overcome it. In this situation, Jotaro could face a formidable adversary with an equally powerful Stand ability. Perhaps this enemy possesses a Stand that directly counters Jotaro's signature Stand, Star Platinum, or has a unique ability that makes them difficult to defeat. This could put Jotaro at a disadvantage, as he relies heavily on his Stand's incredible speed, precision, and strength. To add to the challenge, the adversary might possess intricate knowledge of Jotaro's tactics and weaknesses. They could exploit this information to create elaborate traps or manipulate the environment to hinder Jotaro's movements and limit his options. In order for Jotaro to overcome this predicament, he would need to rely on his quick thinking, strategic planning, and adaptability. He would assess the situation, analyzing the enemy's abilities and identifying any weaknesses or patterns that can be exploited. Jotaro's experience in battles and his profound understanding of Stands would be crucial in formulating a counterstrategy. Jotaro might need to utilize unconventional tactics and employ his environment to gain an advantage. He could try to outwit the opponent, using misdirection, feints, or unconventional methods to catch them off guard. Jotaro's Stand, Star Platinum, possesses precise time-stopping abilities, which he could employ with strategic timing to gain crucial moments to counterattack. Furthermore, Jotaro's strong willpower and determination would fuel his resolve to never give up. Even if he's initially overwhelmed, Jotaro would persistently seek weaknesses, adapt his strategy, and push himself beyond his limits to find a way to overcome the threat. Ultimately, with his intelligence, experience, and unwavering determination, Jotaro would have a strong chance of triumphing over adversity. His resourcefulness and ability to think on his feet, combined with his Stand's incredible powers, would allow him to find a path to victory, even in the face of seemingly insurmountable odds.",
     price: "$399",
   },
   {
@@ -179,5 +179,49 @@ export const EventsData = [
     title: "Naruto: Shippuden ends today",
     desc: "On the episode 500, the final episode of Naruto: Shippuden, Naruto and Hinata finally got married. Author expreses gratitude to all the fans for sticking through thick and thin of the series and making it until the end.",
     price: "$420",
+  },
+];
+
+export const darkManga = [
+  {
+    id: 1,
+    title: "Berserk",
+    author: "Kentaro Miura",
+    img: "/berserkCover.png",
+    alt: "Berserk Cover",
+    price: "$29",
+  },
+  {
+    id: 2,
+    title: "Homunculus",
+    author: "Hideo Yamamoto",
+    img: "/homunculus.png",
+    alt: "Homunculus Cover",
+    price: "$39",
+  },
+  {
+    id: 3,
+    title: "Vagabond",
+    author: "Takehiko Inoue",
+    img: "/vagabond.jpg",
+    alt: "Vagabond Cover",
+    price: "$69",
+  },
+];
+
+export const KentaroMangas = [
+  {
+    id: 1,
+    title: "Gigantomachia",
+    img: "/gigantomachiacover.jpg",
+    alt: "Gigantomachia Cover",
+    price: "$17",
+  },
+  {
+    id: 2,
+    title: "Futatabi",
+    img: "/futatabi.jpeg",
+    alt: "Futatabi Cover",
+    price: "$27",
   },
 ];
