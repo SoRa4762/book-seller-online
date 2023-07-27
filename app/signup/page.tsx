@@ -1,7 +1,40 @@
+import SignUpInputs from "@/elements/signUpInputs/page";
+import Image from "next/image";
+
 type Props = {};
 
-const SignUp = (props: Props) => {
-  return <div>SignUp</div>;
+const Login = (props: Props) => {
+  return (
+    <div
+      className="h-screen m-0 p-0 flex flex-col justify-center items-center gap-8"
+      style={{
+        background: `url(/authImg2.jpg)`,
+        backgroundPosition: "bottom",
+        backgroundSize: "cover",
+      }}
+    >
+      <h1 className="font-light text-4xl text-slate-50">Sign Up</h1>
+      <div
+        className="h-[70vh] w-[70vh] flex flex-col justify-center items-center gap-4 px-10"
+        style={{
+          boxShadow: `rgba(17, 17, 26, 0.5) 0px 8px 32px, rgba(17, 17, 26, 0.5) 0px 16px 48px, rgba(17, 17, 26, 0.5) 0px 32px 112px`,
+        }}
+      >
+        <Image
+          src="/logo.jfif"
+          alt="Logo"
+          height={2000}
+          width={2000}
+          className="h-20 w-20 rounded-full"
+        />
+        <SignUpInputs />
+      </div>
+      <p className="text-xl font-light text-slate-50">
+        &copy; Sora Book Store. All rights reserved | Created using{" "}
+        <span className="font-medium">Next.js</span>
+      </p>
+    </div>
+  );
 };
 
-export default SignUp;
+export default Login;

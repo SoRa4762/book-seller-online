@@ -87,3 +87,45 @@ style={{background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), ur
 
 # UPDATE: To-Do
 i think instead of separting dummy data for each section, i need to add them all in one object, but separated by list of tags, sure, good idea, need to implement later, as it is how it will be in db anyway.
+
+=============
+27/07/2023 - 22:34
+=============
+
+so mate, i am seeing that yeah, i need to learn a lot still, but lets talk about the things that i learned today, on passing value through (e)
+one thing i can do is, 
+
+on a log in form or anyform with many data, just do this
+
+//create object in useState
+const [inputData, setInputData] = useState<string>("");
+
+//setUp onChange Function
+const onChange(e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputData({
+        ...inputData,
+        [e.target.name]: e.target.value
+    })
+}
+
+//passing e from any no. of inputs
+<Input onChange={(e)=>onChange(e)} />
+
+//but if you got to put value not to useState but to variable then...
+
+(e) => {
+    email = e.target[0].value;
+    password = e.target[1].value;
+}
+
+//sample auth using nextAuth Next.js
+ const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+
+    await signIn("credentials", { email, password });
+  };
+
+- another thing i wanted to mention is that, mate, i need to learn NextAuth again, it seems like i have forgotten it, damn! i got to revisit it, but i know that it was easy to understand and learn, but we'll see about that.
