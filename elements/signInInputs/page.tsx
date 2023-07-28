@@ -8,23 +8,17 @@ import { useState } from "react";
 
 type Props = {};
 
-const SignUpInputs = (props: Props) => {
-  const [signUpInputs, setSignUpInputs] = useState<{}>({
+const SignInInputs = (props: Props) => {
+  const [signInInputs, setSignInInputs] = useState<{}>({
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSignUpInputs({
-      ...signUpInputs,
+    setSignInInputs({
+      ...signInInputs,
       [e.target.name]: e.target.value,
     });
-    // console.log([e.target.name, e.target.value]);
-  };
-
-  const handleSubmit = () => {
-    console.log(signUpInputs);
   };
 
   return (
@@ -46,29 +40,25 @@ const SignUpInputs = (props: Props) => {
           onChange(e);
         }}
       />
-      <Input
-        className="flex items-center h-14 rounded-none"
-        placeholder="🔒 Confirm Password"
-        name="confirmPassword"
-        type="password"
-        onChange={(e) => {
-          onChange(e);
-        }}
-      />
       <Button
         className="h-14 flex w-full rounded-none text-lg font-normal bg-green-500 hover:bg-green-600"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
-        SIGN UP
+        SIGN IN
       </Button>
-      <Link
-        href={"/signin"}
-        className="w-full flex justify-end text-sm text-slate-50 font-light cursor-pointer lg:mt-2"
-      >
-        Already Registered?
-      </Link>
+      <div className="flex w-full justify-between lg:mt-2">
+        <p className="text-sm text-slate-50 font-light cursor-pointer">
+          Forgot Password?
+        </p>
+        <Link
+          href={"/signup"}
+          className="text-sm text-slate-50 font-light cursor-pointer"
+        >
+          New User? Sign Up
+        </Link>
+      </div>
       <div className="w-full flex justify-center items-center gap-4 mt-4">
-        <p className="text-slate-50 text-base font-normal">Or Sign Up Using:</p>
+        <p className="text-slate-50 text-base font-normal">Or Sign In Using:</p>
         <div className="flex gap-4">
           <Image
             src="/fb.webp"
@@ -97,4 +87,4 @@ const SignUpInputs = (props: Props) => {
   );
 };
 
-export default SignUpInputs;
+export default SignInInputs;
