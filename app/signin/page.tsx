@@ -8,14 +8,14 @@ const SignIn = (props: Props) => {
     <div
       className="h-screen m-0 p-0 flex flex-col justify-center items-center gap-8"
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/authImg3.jpg)`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/authImg3.jpg)`,
         backgroundPosition: "top",
         backgroundSize: "cover",
       }}
     >
       <h1 className="font-light text-4xl text-slate-50">Sign In</h1>
       <div
-        className="h-[75vh] w-[60vh] flex flex-col justify-center items-center gap-4 px-10"
+        className="h-[80vh] w-[60vh] flex flex-col justify-center items-center gap-4 px-10"
         style={{
           boxShadow: `rgba(17, 17, 26, 0.5) 0px 8px 32px, rgba(17, 17, 26, 0.5) 0px 16px 48px, rgba(17, 17, 26, 0.5) 0px 32px 112px`,
         }}
