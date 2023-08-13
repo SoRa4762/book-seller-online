@@ -96,34 +96,35 @@ const SecondarySection = (props: Props) => {
               <p className="line-clamp-6 mt-2 lg:mt-4 text-xs lg:text-sm">
                 Kentaro Miura (1966-2021) was a Japanese manga artist and writer
                 best known for creating the highly acclaimed dark fantasy series
-                "Berserk." Born on July 11, 1966, in Chiba, Japan, Miura
-                developed a passion for drawing at a young age and pursued a
-                career in manga. Miura debuted as a professional manga artist at
-                the age of 10 when his work won a prize in a manga contest. He
-                continued to hone his skills throughout his teenage years, and
-                in 1988, he published the first chapter of "Berserk" in the
-                magazine "Monthly Animal House." The series quickly gained
-                popularity for its unique blend of dark themes, intricate
-                storytelling, and detailed artwork. Miura's magnum opus,
-                "Berserk," follows the story of Guts, a skilled swordsman with a
-                tragic past who embarks on a quest for revenge against demonic
-                entities known as Apostles. The series explores themes of fate,
-                power, humanity, and the struggle between good and evil.
-                "Berserk" became known for its complex characters, atmospheric
+                &quot;Berserk.&quot; Born on July 11, 1966, in Chiba, Japan,
+                Miura developed a passion for drawing at a young age and pursued
+                a career in manga. Miura debuted as a professional manga artist
+                at the age of 10 when his work won a prize in a manga contest.
+                He continued to hone his skills throughout his teenage years,
+                and in 1988, he published the first chapter of
+                &quot;Berserk&quot; in the magazine &quot;Monthly Animal
+                House.&quot; The series quickly gained popularity for its unique
+                blend of dark themes, intricate storytelling, and detailed
+                artwork. Miura&apos;s magnum opus, &quot;Berserk,&quot; follows
+                the story of Guts, a skilled swordsman with a tragic past who
+                embarks on a quest for revenge against demonic entities known as
+                Apostles. The series explores themes of fate, power, humanity,
+                and the struggle between good and evil. &quot;Berserk&quot;
+                became known for its complex characters, atmospheric
                 world-building, and intense, often violent, storytelling.
-                Miura's artistic talent was widely praised throughout his
+                Miura&apos;s artistic talent was widely praised throughout his
                 career. His detailed and meticulously crafted artwork showcased
                 his ability to portray both the grandeur and the darkness of his
                 fictional world. His attention to detail, especially in the
                 depiction of battle scenes and grotesque creatures, set him
                 apart as a masterful illustrator. Unfortunately, Kentaro Miura
-                passed away on May 6, 2021, leaving "Berserk" unfinished. His
-                sudden death deeply saddened fans around the world, and his
-                contributions to the manga industry and the dark fantasy genre
-                were widely acknowledged. Miura's impact on the medium can still
-                be felt through the enduring legacy of "Berserk" and the
-                profound influence it had on subsequent generations of manga
-                artists and readers.
+                passed away on May 6, 2021, leaving &quot;Berserk&quot;
+                unfinished. His sudden death deeply saddened fans around the
+                world, and his contributions to the manga industry and the dark
+                fantasy genre were widely acknowledged. Miura&apos;s impact on
+                the medium can still be felt through the enduring legacy of
+                &quot;Berserk&quot; and the profound influence it had on
+                subsequent generations of manga artists and readers.
               </p>
             </div>
             {/* author's work */}
