@@ -17,8 +17,8 @@ const Card = ({ id, title, desc, price, img, alt }: Props) => {
         <div className="flex flex-col h-48">
           <Image
             className="rounded-sm shadow-md h-full w-full object-cover shadow-slate-400"
-            height={1000}
-            width={2000}
+            height={9001} //height and width determine the quality of the image in px, max: how many pixels an image has
+            width={9001}
             alt={alt}
             src={img}
           />
