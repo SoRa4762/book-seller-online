@@ -1,30 +1,55 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
-import { NewArrivals } from "@/helper/data";
+// import { NewArrivals } from "@/helper/data";
 import Image from "next/image";
+
+import useSWR from "swr";
+import ComingSoon from "../comingSoon/page";
 
 type Props = {};
 
+//fetch data
+const fetcher = async () => {
+  const response = await fetch("https://api.jikan.moe/v4/manga");
+  const mangaData = await response.json();
+  console.log(mangaData);
+  return mangaData;
+};
+
 const NewArrival = (props: Props) => {
+  const { data, error } = useSWR("mangaData", fetcher);
+
+  if (error)
+    return (
+      <>
+        <p className="text-red-600 font-bold">Error! Loading the Data</p>
+      </>
+    );
+  if (!data) return <>{ComingSoon}</>;
+  console.log(data);
+
   return (
     <div className="px-12 lg:px-20 mb-8">
       <h4 className="flex w-full text-sm lg:text-base font-bold text-slate-600 items-center gap-1 lg:gap-2 mb-2">
         <FontAwesomeIcon icon={faBookOpen} /> New arrivals
       </h4>
       <div className="h-full w-full grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-[3.25rem] justify-center content-center">
-        {NewArrivals.map((newBook) => (
-          <div key={newBook.id}>
+        {data.data.map((manga: any) => (
+          <div key={manga.mal_id}>
             <Image
-              src={newBook.img}
-              alt={newBook.title}
+              src={manga?.images?.jpg?.large_image_url}
+              alt={manga.title}
               width={500}
               height={500}
+              // showThumbs={false}
               className="flex w-full h-full shadow-md shadow-slate-400 rounded-sm cursor-pointer"
               //!need to fix the image width & height issues - fixed
             />
             <div className="flex justify-between mt-2 text-xs font-bold lg:text-sm">
-              <p className="text-slate-500">{newBook.title}</p>
-              <p className="text-green-500">{newBook.price}</p>
+              <p className="text-slate-500">{manga.title}</p>
+              <p className="text-green-500">
+                {manga.chapters ? "Completed" : "On going"}
+              </p>
             </div>
           </div>
         ))}
