@@ -36,8 +36,7 @@ const NewArrival = (props: Props) => {
       </h4>
       <div className="h-full w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
         {data.data.map((manga: any) => (
-          // <Link key={manga.mal_id} href={`/${manga.mal_id}`}>
-          <Link key={manga.mal_id} href={`/${manga.mal_id}`}>
+          <Link key={manga.mal_id} href={`/manga/${manga.mal_id}`}>
             <div className="h-4/5">
               <Image
                 src={manga?.images?.jpg?.large_image_url}
