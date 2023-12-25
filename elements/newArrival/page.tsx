@@ -56,9 +56,12 @@ const NewArrival = (props: Props) => {
           </Link>
         ))}
       </div>
-      <p className=" flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer">
+      <Link
+        href={"/manga"}
+        className=" flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer"
+      >
         More {">"}
-      </p>
+      </Link>
     </div>
   );
 };
