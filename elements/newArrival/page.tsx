@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import useSWR from "swr";
 import ComingSoon from "../comingSoon/page";
+import Link from "next/link";
 
 type Props = {};
 
@@ -33,28 +34,30 @@ const NewArrival = (props: Props) => {
       <h4 className="flex w-full text-sm lg:text-base font-bold text-slate-600 items-center gap-1 lg:gap-2 mb-2">
         <FontAwesomeIcon icon={faBookOpen} /> New arrivals
       </h4>
-      <div className="h-full w-full grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-[3.25rem] justify-center content-center">
+      <div className="h-full w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
         {data.data.map((manga: any) => (
-          <div key={manga.mal_id}>
-            <Image
-              src={manga?.images?.jpg?.large_image_url}
-              alt={manga.title}
-              width={500}
-              height={500}
-              // showThumbs={false}
-              className="flex w-full h-full shadow-md shadow-slate-400 rounded-sm cursor-pointer"
-              //!need to fix the image width & height issues - fixed
-            />
-            <div className="flex justify-between mt-2 text-xs font-bold lg:text-sm">
-              <p className="text-slate-500">{manga.title}</p>
-              <p className="text-green-500">
-                {manga.chapters ? "Completed" : "On going"}
-              </p>
+          // <Link key={manga.mal_id} href={`/${manga.mal_id}`}>
+          <Link key={manga.mal_id} href={`/${manga.mal_id}`}>
+            <div className="h-4/5">
+              <Image
+                src={manga?.images?.jpg?.large_image_url}
+                alt={manga.title}
+                width={2000}
+                height={2000}
+                className="flex w-full h-full shadow-md shadow-slate-400 rounded-sm cursor-pointer"
+                //!need to fix the image width & height issues - fixed
+              />
+              <div className="flex justify-between mt-2 text-xs font-bold lg:text-sm">
+                <p className="text-slate-500">{manga.title}</p>
+                <p className="text-green-500">
+                  {manga.chapters ? "Completed" : "On going"}
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      <p className="h-[10.5vh] flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer">
+      <p className=" flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer">
         More {">"}
       </p>
     </div>
