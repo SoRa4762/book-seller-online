@@ -45,7 +45,7 @@ const HeaderBookSection = (props: Props) => {
         ))}
 
         {/* book to click */}
-        <Carousel>
+        <Carousel showThumbs={false}>
           {FourBooks.map((book) => (
             <div key={book.id} className="flex lg:hidden">
               <Image
