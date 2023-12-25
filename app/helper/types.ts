@@ -1,3 +1,3 @@
 export type paramsType = {
-  params: { id?: number; genre?: string; title?: string };
+  params: { mangaId?: number; genre?: string; title?: string };
 };
