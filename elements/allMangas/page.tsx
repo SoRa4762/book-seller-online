@@ -17,7 +17,7 @@ const fetcher = async () => {
   return mangaData;
 };
 
-const NewArrival = (props: Props) => {
+const AllMangas = (props: Props) => {
   const { data, error } = useSWR("mangaData", fetcher);
 
   if (error)
@@ -32,9 +32,9 @@ const NewArrival = (props: Props) => {
   return (
     <div className="px-12 lg:px-20 mb-8">
       <h4 className="flex w-full text-sm lg:text-base font-bold text-slate-600 items-center gap-1 lg:gap-2 mb-2">
-        <FontAwesomeIcon icon={faBookOpen} /> New arrivals
+        <FontAwesomeIcon icon={faBookOpen} /> All Mangas
       </h4>
-      <div className="h-full w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
+      <div className="h-full w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
         {data.data.map((manga: any) => (
           <Link key={manga.mal_id} href={`/manga/${manga.mal_id}`}>
             <div className="h-4/5">
@@ -48,9 +48,7 @@ const NewArrival = (props: Props) => {
               />
               <div className="flex justify-between mt-2 text-xs font-bold lg:text-sm">
                 <p className="text-slate-500">{manga.title}</p>
-                <p className="text-green-500">
-                  {manga.chapters ? "Completed" : "On going"}
-                </p>
+                <p className="text-green-500">{manga.status}</p>
               </div>
             </div>
           </Link>
@@ -66,4 +64,4 @@ const NewArrival = (props: Props) => {
   );
 };
 
-export default NewArrival;
+export default AllMangas;
