@@ -32,7 +32,7 @@ export const FourBooks = [
 export const NavElements = [
   {
     id: 1,
-    title: "New arrivals",
+    title: "All Mangas",
   },
   {
     id: 2,

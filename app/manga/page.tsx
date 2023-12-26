@@ -3,27 +3,36 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
-// import { NewArrivals } from "@/helper/data";
+// import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 import useSWR from "swr";
 // import ComingSoon from "../../elements/comingSoon";
 import Link from "next/link";
-import Pagination from "@/elements/pagination/page";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 type Props = {};
 
 //fetch data
+let page = 1;
 const fetcher = async () => {
-  const response = await fetch("https://api.jikan.moe/v4/manga");
+  const response = await fetch(`https://api.jikan.moe/v4/manga?page=${page}`);
   const mangaData = await response.json();
   console.log(mangaData);
   return mangaData;
 };
 
-const Manga = (props: Props) => {
+const Manga = ({ searchParams }) => {
+  // const router = useRouter();
   const { data, error } = useSWR("mangaData", fetcher);
-
   if (error)
     return (
       <>
@@ -31,14 +40,14 @@ const Manga = (props: Props) => {
       </>
     );
   // if (!data) return <>{ComingSoon}</>;
-  console.log(data);
+  console.log(data, "this is data inseperated from pagination and actual data");
 
   return (
     <div className="px-12 lg:px-20 mb-8">
       <h4 className="flex w-full text-sm lg:text-base font-bold text-slate-600 items-center gap-1 lg:gap-2 mb-2">
-        <FontAwesomeIcon icon={faBookOpen} /> Mangas
+        <FontAwesomeIcon icon={faBookOpen} /> All Mangas
       </h4>
-      <div className="h-full w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
+      <div className="h-full w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 lg:gap-x-[3.25rem] justify-center content-center">
         {data?.data.map((manga: any) => (
           <Link key={manga.mal_id} href={`/manga/${manga.mal_id}`}>
             <div className="h-4/5">
@@ -52,16 +61,15 @@ const Manga = (props: Props) => {
               />
               <div className="flex justify-between mt-2 text-xs font-bold lg:text-sm">
                 <p className="text-slate-500">{manga.title}</p>
-                <p className="text-green-500">
-                  {manga.chapters ? "Completed" : "On going"}
-                </p>
+                <p className="text-green-500">{manga.status}</p>
               </div>
             </div>
           </Link>
         ))}
       </div>
 
-      <Pagination totalPages={data["pagination"]["last_visible_page"]} />
+      {/* pagination */}
+      
     </div>
   );
 };

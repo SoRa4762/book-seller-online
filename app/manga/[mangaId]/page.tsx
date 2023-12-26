@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { paramsType } from "../../helper/types";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 type Props = {};
 
@@ -53,6 +54,12 @@ const MangaPage = async ({ params }: paramsType) => {
           <p className={styles.desc}>{mangaData.desc}</p>
           {/* authors */}
           <div className={styles.author}>
+            <Link
+              href={"/manga"}
+              className=" flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer"
+            >
+              {"<"} Back
+            </Link>
             <Image
               src={mangakaDetails.data.images?.jpg?.["image_url"]}
               alt={mangakaDetails.data.name}

@@ -1,5 +1,5 @@
 import ComingSoon from "@/elements/comingSoon/page";
-import NewArrival from "@/elements/newArrival/page";
+import AllMangas from "@/elements/allMangas/page";
 
 type Props = { navId: number };
 
@@ -9,7 +9,7 @@ const BooksSection = ({ navId }: Props) => {
     <>
       {/* {navId === 2 &&
         "Hello Prajwal, this is me Sonam A.K.A Suneo Uncle, IDK how or why you set my name as such, but yeah, GGs for you!!!"} */}
-      {navId === 1 && <NewArrival />}
+      {navId === 1 && <AllMangas />}
       {commingSoon.includes(navId) && <ComingSoon />}
     </>
   );

@@ -4,4 +4,5 @@ export type paramsType = {
 
 export type pagination = {
   totalPages: number;
+  currentPage: number;
 };
