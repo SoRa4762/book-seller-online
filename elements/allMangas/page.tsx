@@ -55,7 +55,7 @@ const AllMangas = (props: Props) => {
         ))}
       </div>
       <Link
-        href={"/manga"}
+        href={"/manga?page=1"}
         className=" flex justify-end items-end text-xs lg:text-sm text-slate-500 font-medium cursor-pointer"
       >
         More {">"}
