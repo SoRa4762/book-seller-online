@@ -11,3 +11,7 @@ for (let i = currentPage - 3; i <= currentPage + 3; i++) {
 }
 
 console.log(pageNumber);
+
+{
+  /* now that i have navigation logic in place for starting, it seems like i need to add logic for the last pages as well so yeah mate, lets do it, i guess i need two different pageNumbers adn yeah, we can do it mate */
+}

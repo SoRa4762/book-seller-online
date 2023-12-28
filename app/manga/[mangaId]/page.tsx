@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { paramsType } from "../../helper/types";
+import { paramsType } from "../../../helper/types";
 import styles from "./page.module.css";
 // import BackButton from "@/components/backButton/page";
 
