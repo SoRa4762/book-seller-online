@@ -15,7 +15,6 @@ export default function Pagination({ totalPages, currentPage }: pagination) {
     if (i < 1) continue;
     if (i > totalPages) break;
     pageNumbers.push(i);
-    console.log(i, "this is i");
   }
 
   return (
