@@ -6,11 +6,9 @@ import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import PaginationComponent from "@/elements/pagination/page";
-// import NextPagination from "@/elements/nextuiPagination/page";
+import Pagination from "@/elements/pagination/page";
 
 type Props = {};
-
 const Manga = async ({ searchParams }: any) => {
   let page: number = Number(searchParams.page) ?? 1;
 
@@ -59,7 +57,7 @@ const Manga = async ({ searchParams }: any) => {
       </div>
       {/* pagination */}
       {/* <NextPagination totalPages={totalPage} currentPage={currentPage} /> */}
-      <PaginationComponent totalPages={totalPage} currentPage={currentPage} />
+      <Pagination totalPages={totalPage} currentPage={currentPage} />
     </div>
   );
 };
