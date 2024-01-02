@@ -6,3 +6,9 @@ export type pagination = {
   totalPages: number;
   currentPage: number;
 };
+
+export type seeMore = {
+  expand: Boolean;
+  setExpand: Boolean;
+  content: string;
+};
