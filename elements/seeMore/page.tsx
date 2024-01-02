@@ -3,30 +3,39 @@
 import { seeMore } from "@/helper/types";
 import { useState } from "react";
 // import { Button } from "@/components/ui/button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
-import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
+import { DoubleArrowDownIcon, DoubleArrowUpIcon } from "@radix-ui/react-icons";
 
 const SeeMore = ({ content }: seeMore) => {
   const [expanded, setExpanded] = useState<Boolean>(true);
-  const anglesUp = <FontAwesomeIcon icon={faAnglesUp} />;
 
   return (
     <>
-      <p
-        // style={{
-        //   background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
-        // }}
-        className={`${
-          expanded
-            ? "line-clamp-4 bg-gradient-to-t text-gradient from-zinc-900"
-            : "line-clamp-none"
-        } &&  text-white pt-8 pb-5 font-normal`}
-      >
-        {content}
-      </p>
+      {/* Contents */}
+      <div className="relative">
+        <p
+          // style={{
+          //   background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
+          // }}
+          className={`${
+            expanded
+              ? "line-clamp-4 bg-gradient-to-t text-gradient from-zinc-900"
+              : "line-clamp-none"
+          } &&  text-white pt-8 pb-5 font-normal`}
+        >
+          {content}
+        </p>
+        <div
+          className={`absolute h-16 w-full bottom-0 ${
+            expanded
+              ? "opacity-100 bg-gradient-to-t from-zinc-900"
+              : "h-4 w-full opacity-0 "
+          }`}
+        ></div>
+      </div>
+
       <hr className="w-full h-[0.01rem] mx-auto bg-gray-600 border-0 rounded" />
 
+      {/* see more or less button */}
       <div
         className={`h-[0.15rem] w-full flex justify-center items-start ${
           expanded ? "bg-orange-500" : "bg-transparent pt-8"
@@ -39,13 +48,12 @@ const SeeMore = ({ content }: seeMore) => {
           onClick={() => setExpanded(!expanded)}
         >
           {expanded ? (
-            <FontAwesomeIcon className="h-3" icon={faAnglesDown} />
+            <DoubleArrowDownIcon className="h-[0.8rem]" />
           ) : (
-            <FontAwesomeIcon className="h-3" icon={faAnglesUp} />
+            <DoubleArrowUpIcon className="h-[0.8rem]" />
           )}
-
           {expanded ? "See More" : "See Less"}
-          <FontAwesomeIcon className="h-3" icon={faAnglesDown} />
+          <DoubleArrowDownIcon className="h-[0.8rem]" />
         </button>
       </div>
     </>
