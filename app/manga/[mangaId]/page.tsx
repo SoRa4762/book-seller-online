@@ -13,8 +13,10 @@ import {
   faUser,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import { MoveIcon } from "@radix-ui/react-icons";
 import formatNumbers from "@/helper/formatNumbers";
 import SeeMore from "@/elements/seeMore/page";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 type Props = {};
 
@@ -79,13 +81,40 @@ const MangaPage = async ({ params }: paramsType) => {
         <div className="h-80 w-full px-12 bg-transparent">
           {/* image and titles */}
           <div className="flex h-full w-full gap-8">
-            <Image
-              className="absolute w-52 rounded-md cursor-pointer"
-              src={mangaData?.data?.images?.jpg?.large_image_url}
-              alt={mangaData?.data?.title}
-              height={2000}
-              width={2000}
-            />
+            {/* image and hover effect */}
+            <div className="absolute cursor-pointer w-52 rounded-md">
+              <Image
+                className="h-full w-full rounded-md"
+                src={mangaData?.data?.images?.jpg?.large_image_url}
+                alt={mangaData?.data?.title}
+                height={2000}
+                width={2000}
+              />
+
+              <div
+                style={{
+                  background: "rgba(0, 0, 0, 0.5)",
+                }}
+                className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity hover:opacity-100 rounded-md"
+              >
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="h-full w-full bg-transparent flex justify-center items-center ">
+                      <MoveIcon className="text-white h-14 w-14" />
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <Image
+                      className="h-[85vh] w-full"
+                      src={mangaData?.data?.images?.jpg?.large_image_url}
+                      alt={mangaData?.data?.title}
+                      height={2000}
+                      width={2000}
+                    />
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
             <div className="flex flex-col items-start justify-between text-white py-3 pl-56">
               <div>
                 <h1 className="font-extrabold text-7xl">

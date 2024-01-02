@@ -8,7 +8,7 @@ export type pagination = {
 };
 
 export type seeMore = {
-  expand: Boolean;
-  setExpand: Boolean;
+  // expand: Boolean;
+  // setExpand: Boolean;
   content: string;
 };
