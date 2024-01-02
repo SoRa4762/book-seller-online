@@ -1,8 +1,5 @@
 import { pagination } from "@/helper/types";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
-import { faLessThan } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {};
 
@@ -28,7 +25,7 @@ export default function Pagination({ totalPages, currentPage }: pagination) {
             }
             `}
           >
-            <FontAwesomeIcon className="h-3" icon={faLessThan} /> Previous
+            {"<"} Previous
           </Link>
         </div>
         {pageNumbers.map((page) => (
@@ -66,7 +63,7 @@ export default function Pagination({ totalPages, currentPage }: pagination) {
             }`}
             href={`/manga?page=${currentPage + 1}`}
           >
-            Next <FontAwesomeIcon className="h-3" icon={faGreaterThan} />
+            Next {">"}
           </Link>
         </div>
       </div>

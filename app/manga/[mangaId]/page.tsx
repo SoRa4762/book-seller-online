@@ -14,6 +14,7 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import formatNumbers from "@/helper/formatNumbers";
+import SeeMore from "@/elements/seeMore/page";
 
 type Props = {};
 
@@ -88,9 +89,9 @@ const MangaPage = async ({ params }: paramsType) => {
             <div className="flex flex-col items-start justify-between text-white py-3 pl-56">
               <div>
                 <h1 className="font-extrabold text-7xl">
-                  {mangaData?.data?.title_japanese}
+                  {mangaData?.data?.title_english}
                 </h1>
-                <h2 className="text-xl">{mangaData?.data?.title_english}</h2>
+                <h2 className="text-xl">{mangaData?.data?.title_japanese}</h2>
               </div>
               <div className="flex gap-2">
                 {mangaData?.data?.authors.map((author: any) => (
@@ -172,10 +173,7 @@ const MangaPage = async ({ params }: paramsType) => {
             </div>
           </div>
           {/* Synopsis */}
-          <p className="text-white pt-8 pb-5 font-light">
-            {mangaData?.data?.synopsis}
-          </p>
-          <hr className="w-full h-[0.01rem] mx-auto bg-gray-600 border-0 rounded" />
+          <SeeMore content={mangaData?.data?.synopsis} />
         </div>
       </div>
     </>
