@@ -85,7 +85,7 @@ const MangaPage = async ({ params }: paramsType) => {
           {/* image and titles */}
           <div className="flex h-full w-full gap-8">
             {/* image and hover effect */}
-            <div className="absolute cursor-pointer w-52 rounded-md">
+            <div className="absolute cursor-pointer h-36 md:w-52 rounded-md">
               <Image
                 className="h-full w-full rounded-md"
                 src={mangaData?.data?.images?.jpg?.large_image_url}
@@ -127,7 +127,7 @@ const MangaPage = async ({ params }: paramsType) => {
               </div>
               <div className="flex gap-2">
                 {mangaData?.data?.authors.map((author: any) => (
-                  <p key={author.mal_id} className="text-xl">
+                  <p key={author.mal_id} className="text-xs md:text-md">
                     {author.name + ","}
                   </p>
                 ))}
