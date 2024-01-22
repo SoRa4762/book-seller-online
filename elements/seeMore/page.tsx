@@ -17,9 +17,7 @@ const SeeMore = ({ content }: seeMore) => {
           //   background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
           // }}
           className={`${
-            expanded
-              ? "line-clamp-4 bg-gradient-to-t text-gradient from-zinc-900"
-              : "line-clamp-none"
+            expanded ? "line-clamp-6" : "line-clamp-none"
           } &&  text-white pt-8 pb-5 font-normal`}
         >
           {content}
@@ -28,7 +26,7 @@ const SeeMore = ({ content }: seeMore) => {
           className={`absolute h-16 w-full bottom-0 ${
             expanded
               ? "opacity-100 bg-gradient-to-t from-zinc-900"
-              : "h-4 w-full opacity-0 "
+              : "h-4 w-full opacity-0"
           }`}
         ></div>
       </div>

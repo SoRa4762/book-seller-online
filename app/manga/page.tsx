@@ -17,7 +17,7 @@ const Manga = async ({ searchParams }: any) => {
     const response = await fetch(
       `https://api.jikan.moe/v4/manga?page=${page}`,
       { cache: "force-cache" }
-    );
+    ); 
     if (!response.ok) {
       return notFound();
     }

@@ -9,14 +9,17 @@ import {
   faBookOpen,
   faFlag,
   faArrowUpFromBracket,
-  faStar,
-  faUser,
-  faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import { MoveIcon } from "@radix-ui/react-icons";
+import {
+  MoveIcon,
+  HeartIcon,
+  StarIcon,
+  PersonIcon,
+} from "@radix-ui/react-icons";
 import formatNumbers from "@/helper/formatNumbers";
 import SeeMore from "@/elements/seeMore/page";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import DropDown from "@/elements/dropDown/page";
 
 type Props = {};
 
@@ -63,7 +66,7 @@ const MangaPage = async ({ params }: paramsType) => {
   return (
     <>
       <div
-        className="h-[100vh] w-full fixed"
+        className="h-[100vh] m-0 p-0 w-full fixed"
         style={{
           background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${mangaData?.data?.images?.webp?.large_image_url})`,
           backgroundSize: "cover",
@@ -82,7 +85,7 @@ const MangaPage = async ({ params }: paramsType) => {
           {/* image and titles */}
           <div className="flex h-full w-full gap-8">
             {/* image and hover effect */}
-            <div className="absolute cursor-pointer w-52 rounded-md">
+            <div className="absolute cursor-pointer h-36 md:w-52 rounded-md">
               <Image
                 className="h-full w-full rounded-md"
                 src={mangaData?.data?.images?.jpg?.large_image_url}
@@ -124,7 +127,7 @@ const MangaPage = async ({ params }: paramsType) => {
               </div>
               <div className="flex gap-2">
                 {mangaData?.data?.authors.map((author: any) => (
-                  <p key={author.mal_id} className="text-xl">
+                  <p key={author.mal_id} className="text-xs md:text-md">
                     {author.name + ","}
                   </p>
                 ))}
@@ -138,18 +141,30 @@ const MangaPage = async ({ params }: paramsType) => {
           <div className="flex flex-col pl-56 pt-4">
             {/* buttons */}
             <div className="h-full w-full flex items-center gap-2">
-              <Button className="bg-orange-500 hover:bg-orange-700 px-16 py-6 text-lg rounded-sm">
+              <Button className="bg-orange-500 hover:bg-orange-700 px-16 py-6 text-md md:text-lg rounded-sm">
                 Add to Library
               </Button>
-              <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
-                <FontAwesomeIcon icon={faBookOpen} className="h-6" />
-              </Button>
-              <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
-                <FontAwesomeIcon icon={faFlag} className="h-6" />
-              </Button>
-              <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
-                <FontAwesomeIcon icon={faArrowUpFromBracket} className="h-6" />
-              </Button>
+
+              {/* icons */}
+              <div className="hidden lg:flex gap-2">
+                <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
+                  <FontAwesomeIcon icon={faBookOpen} className="h-6" />
+                </Button>
+                <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
+                  <FontAwesomeIcon icon={faFlag} className="h-6" />
+                </Button>
+                <Button className="bg-zinc-600 hover:bg-zinc-700 px-4 py-6 text-lg rounded-sm">
+                  <FontAwesomeIcon
+                    icon={faArrowUpFromBracket}
+                    className="h-6"
+                  />
+                </Button>
+              </div>
+
+              {/* dropdown to replace icons */}
+              <div className="lg:hidden flex">
+                <DropDown />
+              </div>
             </div>
 
             {/* genres and publication & status */}
@@ -188,15 +203,15 @@ const MangaPage = async ({ params }: paramsType) => {
             {/* ratings, favourites and members*/}
             <div className="h-full w-full flex pt-5 gap-2 items-center font-normal">
               <p className="text-orange-500 flex items-center h-full gap-1">
-                <FontAwesomeIcon className="h-4" icon={faStar} />
+                <StarIcon />
                 {mangaData?.data?.score}
               </p>
               <p className="text-red-400 flex items-center h-full gap-1">
-                <FontAwesomeIcon className="h-4" icon={faHeart} />
+                <HeartIcon />
                 {formatNumbers(mangaData?.data?.favorites)}
               </p>
               <p className="text-blue-400 flex items-center h-full gap-1">
-                <FontAwesomeIcon className="h-4" icon={faUser} />
+                <PersonIcon />
                 {formatNumbers(mangaData?.data?.members)}
               </p>
             </div>
